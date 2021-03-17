@@ -3,6 +3,20 @@ import styled from "styled-components"
 import bank_logo from "../../assets/images/bank_logo.svg";
 import { corPrimaria } from '../UI/variaveis'
 
+const BtnCabecalho = styled.a`
+
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  border: 2px solid white;
+
+  background: ${(props) => (props.primary ? "#fff" : corPrimaria )}
+  color: ${(props) => (props.primary ? corPrimaria : "#fff" )}
+
+`
+
 const StyledHeader = styled.nav`
 
   background-color: ${corPrimaria};
@@ -19,17 +33,17 @@ const Logo = styled.img`
   width: 50px;
 `
 
-const Cabecalho = () => {
+const Cabecalho = (props) => {
   return (
     <StyledHeader>
       <Logo src={bank_logo} alt="Logo Smart Bank" />
       <div>
-        <a className="btn-secundario" href="https://google.com">
+        <BtnCabecalho primary href="https://google.com">
           Ajuda
-        </a>
-        <a className="btn-primario" href="https://google.com">
+        </BtnCabecalho>
+        <BtnCabecalho href="https://google.com">
           Sair
-        </a>
+        </BtnCabecalho>
       </div>
     </StyledHeader>
   );
