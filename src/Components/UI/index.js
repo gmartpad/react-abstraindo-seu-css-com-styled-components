@@ -23,21 +23,21 @@ export const Box = styled.div`
 
 `
 
-export const Saldo = style.div`
+export const Saldo = styled.div`
 
     font-weight: 700;
     font-size: 32px;
 
 `
 
-export const Detalhe = style.span`
+export const Detalhe = styled.span`
 
     color: #41d3be;
     font-size: 24px;
 
 `
 
-export const Botao = style.button`
+export const Botao = styled.button`
 
     margin: 15px auto 0px auto;
     display: block;
